@@ -1,0 +1,13 @@
+.caracterCard {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 100%;
+    min-width: 245px;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+
+img {
+    width:100%
+}

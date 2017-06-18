@@ -1,0 +1,8 @@
+@font-face {
+    font-family: GameOfThrones;
+    src: url(fonts/9327.ttf); /* Путь к файлу со шрифтом */
+}
+* {
+    font-family: GameOfThrones;
+    box-sizing: border-box;
+}

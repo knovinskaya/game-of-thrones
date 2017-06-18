@@ -1,0 +1,35 @@
+.page {
+    padding: 30px;
+    column-gap: 1.5em;
+    column-count: 5;
+}
+
+@media only screen and (max-width: 600px) {
+    .page {
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .page {
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    .page {
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1075px) {
+    .page {
+        column-count: 4;
+    }
+}
+
+@media only screen and (min-width: 1420px) {
+    .page {
+        column-count: 5;
+    }
+}
