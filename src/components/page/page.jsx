@@ -19,7 +19,7 @@ class Page extends React.PureComponent {
     componentDidMount() {
         const { number } = this.props;
 
-        this.props.getPageInfo(number);
+        this.props.getPageInfo();
     }
 
     render() {
