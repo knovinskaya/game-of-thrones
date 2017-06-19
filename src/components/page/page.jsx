@@ -2,10 +2,7 @@ import React from 'react';
 import bemCn from 'bem-cn-fast';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
-import {
-    getPageInfo,
-    characterClick
-} from '../../actions/app';
+import { characterClick } from '../../actions/app';
 import { getCurrentPageInfo } from '../../selectors/characters';
 
 import CharacterCard from '../characterCard/characterCard'
@@ -15,13 +12,6 @@ import './page.css';
 const b = bemCn('page');
 
 class Page extends React.PureComponent {
-
-    componentDidMount() {
-        const { number } = this.props;
-
-        this.props.getPageInfo();
-    }
-
     render() {
         const { info } = this.props;
 
@@ -54,9 +44,6 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => bindActionCreators(
-    {
-        characterClick,
-        getPageInfo
-    }, dispatch);
+    { characterClick }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Page)

@@ -1,4 +1,4 @@
-.caracterCard {
+.caracter-card {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     width: 100%;
     min-width: 245px;
@@ -6,6 +6,11 @@
     display: inline-block;
     box-sizing: border-box;
     margin: 20px 0;
+    max-width: 350px;
+}
+
+.caracter-card:hover {
+    cursor: pointer;
 }
 
 img {

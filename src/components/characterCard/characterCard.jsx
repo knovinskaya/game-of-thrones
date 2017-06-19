@@ -3,22 +3,24 @@ import bemCn from 'bem-cn-fast';
 
 import './characterCard.css';
 
-const b = bemCn('caracterCard');
+const b = bemCn('caracter-card');
 
 export default class CharacterCard extends React.PureComponent {
     render() {
-        const { character, onClick } = this.props;
+        const { character: { name, imageLink}, onClick } = this.props;
 
         return (
             <div
                 onClick={ onClick }
                 className={ b() }
             >
-                { character.name }
-                <img
-                    className={ b('image') }
-                    src={ `https://api.got.show/${character.imageLink}` }
-                />
+                { name }
+                { imageLink &&
+                    <img
+                        className={ b('image') }
+                        src={ `https://api.got.show/${ imageLink }` }
+                    />
+                }
             </div>
         );
     }

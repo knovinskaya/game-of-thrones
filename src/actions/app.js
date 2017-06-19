@@ -1,5 +1,5 @@
 import { createActions } from 'redux-actions';
-import { push } from 'react-router-redux';
+import { browserHistory } from 'react-router'
 
 export const { getPageInfo, characterClick, scrollWindow } = createActions({
     getPageInfo: handleGetPageInfo,
@@ -13,7 +13,6 @@ function handleGetPageInfo() {
 }
 
 function handleCharacterClick(characterName) {
-    const name = characterName.replace(/\s/g, "_");
-    console.log(`/character/${name}`);
-    return push(`/character/${name}`);
+    const name = encodeURIComponent(characterName);
+    return browserHistory.push(`/character/${name}`);
 }

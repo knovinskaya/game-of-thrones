@@ -1,0 +1,16 @@
+.character-page {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.character-page__role-name {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.character-page__role {
+    max-width: 350px;
+}

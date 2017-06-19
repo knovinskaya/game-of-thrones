@@ -5,7 +5,7 @@ const getCharactersWithImages = (state) => {
     return characters.filter( value => !!value.imageLink);
 };
 const getCurrentPage = (state) => state.app.currentPage.number;
-const getCharacters = (state) => {
+export const getCharacters = (state) => {
     const { characters = [] } = state.app;
     return characters.reduce((acc, item) => {
         acc[item.name] = item;
